@@ -1,10 +1,3 @@
-/********************************************************************************************
-Camera Measurements
-
-Description: Writes camera data to CSV files to create histogram.
-Author: Beat Hirsbrunner, Julien Nembrini, Simon Studer (University of Fribourg)
-Version: 1.0 (2016-03-24)
-********************************************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

@@ -1,9 +1,9 @@
-package NeuralNetwork;
+package Model.NeuralNetwork;
 
 import Jama.Matrix;
-import NeuralNetwork.Layers.HiddenLayer;
-import NeuralNetwork.Layers.InputLayer;
-import NeuralNetwork.Layers.OutputLayer;
+import Model.NeuralNetwork.Layers.HiddenLayer;
+import Model.NeuralNetwork.Layers.InputLayer;
+import Model.NeuralNetwork.Layers.OutputLayer;
 
 import java.io.*;
 import java.text.SimpleDateFormat;

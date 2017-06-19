@@ -1,8 +1,8 @@
-package NeuralNetwork.Layers;
+package Model.NeuralNetwork.Layers;
 
 import Jama.Matrix;
-import NeuralNetwork.Neuron.BiasNeuron;
-import NeuralNetwork.Neuron.Neuron;
+import Model.NeuralNetwork.Neuron.BiasNeuron;
+import Model.NeuralNetwork.Neuron.Neuron;
 
 /**
  * Describes Layer in the Neural network

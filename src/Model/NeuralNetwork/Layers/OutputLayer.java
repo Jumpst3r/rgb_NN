@@ -1,7 +1,7 @@
-package NeuralNetwork.Layers;
+package Model.NeuralNetwork.Layers;
 
 import Jama.Matrix;
-import NeuralNetwork.Neuron.Neuron;
+import Model.NeuralNetwork.Neuron.Neuron;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,7 +1,7 @@
-package NeuralNetwork.Neuron;
+package Model.NeuralNetwork.Neuron;
 
 import Jama.Matrix;
-import NeuralNetwork.NeuralNetwork;
+import Model.NeuralNetwork.NeuralNetwork;
 
 /**
  * Stripped down version of the

@@ -1,8 +1,8 @@
-package NeuralNetwork.Layers;
+package Model.NeuralNetwork.Layers;
 
-import NeuralNetwork.Neuron.BiasNeuron;
-import NeuralNetwork.Neuron.InputNeuron;
-import NeuralNetwork.Neuron.Neuron;
+import Model.NeuralNetwork.Neuron.BiasNeuron;
+import Model.NeuralNetwork.Neuron.InputNeuron;
+import Model.NeuralNetwork.Neuron.Neuron;
 
 /**
  * Describes the network's input layer

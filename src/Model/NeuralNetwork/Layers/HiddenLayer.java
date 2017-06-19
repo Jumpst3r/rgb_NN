@@ -1,4 +1,4 @@
-package NeuralNetwork.Layers;
+package Model.NeuralNetwork.Layers;
 
 import Jama.Matrix;
 

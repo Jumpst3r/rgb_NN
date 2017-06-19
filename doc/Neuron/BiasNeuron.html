@@ -30,7 +30,7 @@ var activeTableTab = "activeTableTab";
 </noscript>
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="subTitle">NeuralNetwork.Neuron</div>
+<div class="subTitle">Model.NeuralNetwork.Neuron</div>
 <h2 title="Class BiasNeuron" class="title">Class BiasNeuron</h2>
 </div>
 <div class="contentContainer">
@@ -38,10 +38,10 @@ var activeTableTab = "activeTableTab";
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li><a href="../Neuron/Neuron.html" title="class in NeuralNetwork.Neuron">NeuralNetwork.Neuron.Neuron</a></li>
+<li><a href="../Neuron/Neuron.html" title="class in Model.NeuralNetwork.Neuron">Model.NeuralNetwork.Neuron.Neuron</a></li>
 <li>
 <ul class="inheritance">
-<li>NeuralNetwork.Neuron.BiasNeuron</li>
+<li>Model.NeuralNetwork.Neuron.BiasNeuron</li>
 </ul>
 </li>
 </ul>
@@ -53,10 +53,10 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre>public class <span class="typeNameLabel">BiasNeuron</span>
-extends <a href="../Neuron/Neuron.html" title="class in NeuralNetwork.Neuron">NeuralNetwork.Neuron</a></pre>
+extends <a href="../Neuron/Neuron.html" title="class in Model.NeuralNetwork.Neuron">Model.NeuralNetwork.Neuron</a></pre>
 <div class="block">Stripped down version of the
- NeuralNetwork.Neuron class, represents a
- neuron with static input of one.</div>
+    Model.NeuralNetwork.Neuron class, represents a
+    neuron with static input of one.</div>
 </li>
 </ul>
 </div>
@@ -73,7 +73,7 @@ extends <a href="../Neuron/Neuron.html" title="class in NeuralNetwork.Neuron">Ne
 <li class="blockList"><a name="fields.inherited.from.class.Neuron.Neuron">
 <!--   -->
 </a>
-<h3>Fields inherited from class&nbsp;NeuralNetwork.Neuron.<a href="../Neuron/Neuron.html" title="class in NeuralNetwork.Neuron">NeuralNetwork.Neuron</a></h3>
+<h3>Fields inherited from class&nbsp;NeuralNetwork.Neuron.<a href="../Neuron/Neuron.html" title="class in Model.NeuralNetwork.Neuron">Model.NeuralNetwork.Neuron</a></h3>
 <code><a href="../Neuron/Neuron.html#input">input</a>, <a href="../Neuron/Neuron.html#learningRate">learningRate</a>, <a href="../Neuron/Neuron.html#nb_of_inputs">nb_of_inputs</a>, <a href="../Neuron/Neuron.html#neuronOutput">neuronOutput</a>, <a href="../Neuron/Neuron.html#synapse_weights">synapse_weights</a>, <a href="../Neuron/Neuron.html#weightedInput">weightedInput</a></code></li>
 </ul>
 </li>
@@ -124,7 +124,7 @@ extends <a href="../Neuron/Neuron.html" title="class in NeuralNetwork.Neuron">Ne
 <li class="blockList"><a name="methods.inherited.from.class.Neuron.Neuron">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;NeuralNetwork.Neuron.<a href="../Neuron/Neuron.html" title="class in NeuralNetwork.Neuron">NeuralNetwork.Neuron</a></h3>
+<h3>Methods inherited from class&nbsp;NeuralNetwork.Neuron.<a href="../Neuron/Neuron.html" title="class in Model.NeuralNetwork.Neuron">Model.NeuralNetwork.Neuron</a></h3>
 <code><a href="../Neuron/Neuron.html#activate-double-">activate</a>, <a href="../Neuron/Neuron.html#calculateWeightedInput--">calculateWeightedInput</a>, <a href="../Neuron/Neuron.html#getNeuronOutput--">getNeuronOutput</a>, <a href="../Neuron/Neuron.html#getSynapse_weights--">getSynapse_weights</a>, <a href="../Neuron/Neuron.html#getWeightedInput--">getWeightedInput</a>, <a href="../Neuron/Neuron.html#setRandomWeights--">setRandomWeights</a></code></li>
 </ul>
 <ul class="blockList">
@@ -177,11 +177,11 @@ extends <a href="../Neuron/Neuron.html" title="class in NeuralNetwork.Neuron">Ne
  and sets the bias neurons input statically.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="../Neuron/Neuron.html#process-Jama.Matrix-">process</a></code>&nbsp;in class&nbsp;<code><a href="../Neuron/Neuron.html" title="class in NeuralNetwork.Neuron">NeuralNetwork.Neuron</a></code></dd>
+<dd><code><a href="../Neuron/Neuron.html#process-Jama.Matrix-">process</a></code>&nbsp;in class&nbsp;<code><a href="../Neuron/Neuron.html" title="class in Model.NeuralNetwork.Neuron">Model.NeuralNetwork.Neuron</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>input</code> - the neurons input Matrix (no effect)</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../Neuron/Neuron.html#activate-double-"><code>NeuralNetwork.Neuron.activate(double)</code></a></dd>
+<dd><a href="../Neuron/Neuron.html#activate-double-"><code>Model.NeuralNetwork.Neuron.activate(double)</code></a></dd>
 </dl>
 </li>
 </ul>
@@ -192,12 +192,12 @@ extends <a href="../Neuron/Neuron.html" title="class in NeuralNetwork.Neuron">Ne
 <li class="blockList">
 <h4>adjustSynapseWeights</h4>
 <pre>public&nbsp;void&nbsp;adjustSynapseWeights(Jama.Matrix&nbsp;weightDelta)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../Neuron/Neuron.html#adjustSynapseWeights-Jama.Matrix-">NeuralNetwork.Neuron</a></code></span></div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../Neuron/Neuron.html#adjustSynapseWeights-Jama.Matrix-">Model.NeuralNetwork.Neuron</a></code></span></div>
 <div class="block">Adjusts neurons weight matrix by a given delta.
  Used in the back-propagation algorithm</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="../Neuron/Neuron.html#adjustSynapseWeights-Jama.Matrix-">adjustSynapseWeights</a></code>&nbsp;in class&nbsp;<code><a href="../Neuron/Neuron.html" title="class in NeuralNetwork.Neuron">NeuralNetwork.Neuron</a></code></dd>
+<dd><code><a href="../Neuron/Neuron.html#adjustSynapseWeights-Jama.Matrix-">adjustSynapseWeights</a></code>&nbsp;in class&nbsp;<code><a href="../Neuron/Neuron.html" title="class in Model.NeuralNetwork.Neuron">Model.NeuralNetwork.Neuron</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>weightDelta</code> - The delta Matrix to be added to the
                     neurons weights.</dd>

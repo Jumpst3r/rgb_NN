@@ -1,4 +1,4 @@
-package NeuralNetwork.Neuron;
+package Model.NeuralNetwork.Neuron;
 
 import Jama.Matrix;
 

@@ -1,15 +1,11 @@
 package Controller.Base;
 
 import Model.NeuralNetwork.NeuralNetwork;
-import View.EpochTextField;
-import View.FileSelectorButton;
-import View.NeuronTextField;
+import View.View;
 import javafx.application.Application;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import org.apache.commons.cli.*;
@@ -22,6 +18,8 @@ import java.util.concurrent.TimeUnit;
  * See <a href="https://commons.apache.org/proper/commons-cli/javadocs/api-release/index.html">Apache-commons-cli javadoc</a>
  */
 public class Main extends Application{
+
+    public static GridPane root;
 
     //get start time
     public static long start = System.currentTimeMillis();
@@ -158,26 +156,15 @@ public class Main extends Application{
 
     private void initRootPane(GridPane root) {
 
+
+        root.setAlignment(Pos.CENTER);
         root.setPadding(new Insets(5, 5, 5, 5));
         root.setHgap(100);
         root.setVgap(5);
 
+        Main.root = root;
 
-        root.add(new Label("Select training set"),0,0);
-        root.add(new FileSelectorButton("training set"),1,0);
-        root.add(new Label("Select validation set"),0,1);
-        root.add(new FileSelectorButton("validation set"),1,1);
-        root.add(new Label("Select testing set"),0,2);
-        root.add(new FileSelectorButton("testing set"),1,2);
-
-        root.add(new Label("Number of hidden neurons"), 0, 3);
-        root.add(new NeuronTextField(),1,3);
-
-        root.add(new Label("Number of epochs"), 0, 4);
-        root.add(new EpochTextField(),1,4);
-
-
-
+        View.addUIElements();
     }
 
     public static String getEPOCHS() {

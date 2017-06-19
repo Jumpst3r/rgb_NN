@@ -1,5 +1,6 @@
 package Model.NeuralNetwork;
 
+import Controller.Controller;
 import Jama.Matrix;
 import Model.NeuralNetwork.Layers.HiddenLayer;
 import Model.NeuralNetwork.Layers.InputLayer;
@@ -104,6 +105,11 @@ public class NeuralNetwork {
      * Contains color definition in the testing set
      */
     private String[] colorNames = null;
+
+    /**
+     * Contains the current training progress percentage
+     */
+    private double percentage = 0;
     /**
      * Create a neural network with the following topology:
      * Input Layer: 3 input nodes (R/G/B) + bias
@@ -197,8 +203,9 @@ public class NeuralNetwork {
      * @param currentEpoch elapsed epochs
      */
     private void printProgress(int nbOfEpochs, int currentEpoch) {
-        double percentage = (100. / (double) nbOfEpochs) * currentEpoch;
-        System.out.printf("\r[%.2f%%]", percentage);
+        this.percentage = (100. / (double) nbOfEpochs) * currentEpoch;
+        Controller.updateProgress(this.percentage);
+        System.out.printf("\r[%.2f%%]", this.percentage);
     }
 
     /**
@@ -634,5 +641,12 @@ public class NeuralNetwork {
      */
     public double getFinalValidationErr() {
         return finalValidationErr;
+    }
+
+    /**
+     * @return the current training percentage
+     */
+    public double getPercentage() {
+        return percentage;
     }
 }

@@ -20,20 +20,22 @@ public class Controller {
 
 
     public static void create_Neural_Net() {
-        NeuralNetwork neuralNetwork = new NeuralNetwork(nbOfHiddenNeurons, nbOfColors);
-        neuralNetwork.setWriteStats(stats);
-        try {
-            neuralNetwork.parseDataSets(training_set.getAbsolutePath(),validation_set.getAbsolutePath(),testing_set.getAbsolutePath());
-        } catch (Exception e) {
-            System.err.println("Invalid csv format");
-        }
-        try {
-            neuralNetwork.init(nbOfEpochs);
-        } catch (Exception e) {
-            System.err.println("Failed loading training inputs");
-        }
-        neuralNetwork.write_C_source("out.c");
+        new Thread(()->{
+            NeuralNetwork neuralNetwork = new NeuralNetwork(nbOfHiddenNeurons, nbOfColors);
+            neuralNetwork.setWriteStats(stats);
+            try {
+                neuralNetwork.parseDataSets(training_set.getAbsolutePath(),validation_set.getAbsolutePath(),testing_set.getAbsolutePath());
+            } catch (Exception e) {
+                System.err.println("Invalid csv format");
+            }
+            try {
+                neuralNetwork.init(nbOfEpochs);
+            } catch (Exception e) {
+                System.err.println("Failed loading training inputs");
+            }
+            neuralNetwork.write_C_source("out.c");
 
+        }).run();
     }
 
     public static void updateProgress(double percentage) {

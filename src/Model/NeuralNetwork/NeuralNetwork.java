@@ -5,8 +5,10 @@ import Jama.Matrix;
 import Model.NeuralNetwork.Layers.HiddenLayer;
 import Model.NeuralNetwork.Layers.InputLayer;
 import Model.NeuralNetwork.Layers.OutputLayer;
+import javafx.application.Platform;
 
 import java.io.*;
+import java.lang.management.PlatformLoggingMXBean;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -204,7 +206,7 @@ public class NeuralNetwork {
      */
     private void printProgress(int nbOfEpochs, int currentEpoch) {
         this.percentage = (100. / (double) nbOfEpochs) * currentEpoch;
-        Controller.updateProgress(this.percentage);
+        Platform.runLater(()->Controller.updateProgress(this.percentage));
         System.out.printf("\r[%.2f%%]", this.percentage);
     }
 
